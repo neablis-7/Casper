@@ -2394,6 +2394,6 @@ body.dark .reading-time {
 body.dark .post-full-content code {
     background: var(--darkBackgroundLight);
 }
-hr {
+body.dark hr {
     border-top: 1px solid color(var(--darkBackground) l(+10%));
 }

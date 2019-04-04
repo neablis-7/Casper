@@ -1,64 +1,34 @@
 # Casper
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Casper. If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/Casper/releases) page.
+The  dark mode enabled version of default theme for [Ghost](http://github.com/tryghost/ghost/). If you're just looking to download the original version, head over to the [releases](https://github.com/TryGhost/Casper/releases) page.
 
 &nbsp;
 
-![screenshot-desktop](https://user-images.githubusercontent.com/120485/27221326-1e31d326-5280-11e7-866d-82d550a7683b.jpg)
+![Home](https://user-images.githubusercontent.com/278469/55558098-f697a900-5708-11e9-8e80-2abcc9da2977.jpg)
+![Author](https://user-images.githubusercontent.com/278469/55558126-057e5b80-5709-11e9-840c-4ccb8fdcd5d0.jpg)
+![Page](https://user-images.githubusercontent.com/278469/55558127-0616f200-5709-11e9-89aa-ad9cd3b7fdb2.jpg)
+![Post](https://user-images.githubusercontent.com/278469/55558128-0616f200-5709-11e9-9db6-9930228854d0.jpg)
+![Tag](https://user-images.githubusercontent.com/278469/55558130-0616f200-5709-11e9-9c38-78a72995401c.jpg)
 
 &nbsp;
 
-# First time using a Ghost theme?
+# What do you have to do?
 
-Ghost uses a simple templating language called [Handlebars](http://handlebarsjs.com/) for its themes.
+To enable the dark mode on your Ghost site, download the latest release of this theme and copy and paste the following code into `Code injection -> Site Footer` in Ghost Admin panel.
 
-We've documented our default theme pretty heavily so that it should be fairly easy to work out what's going on just by reading the code and the comments. Once you feel comfortable with how everything works, we also have full [theme API documentation](https://themes.ghost.org) which explains every possible Handlebars helper and template.
-
-**The main files are:**
-
-- `default.hbs` - The main template file
-- `index.hbs` - Used for the home page
-- `post.hbs` - Used for individual posts
-- `page.hbs` - Used for individual pages
-- `tag.hbs` - Used for tag archives
-- `author.hbs` - Used for author archives
-
-One really neat trick is that you can also create custom one-off templates just by adding the slug of a page to a template file. For example:
-
-- `page-about.hbs` - Custom template for the `/about/` page
-- `tag-news.hbs` - Custom template for `/tag/news/` archive
-- `author-ali.hbs` - Custom template for `/author/ali/` archive
-
-
-# Development
-
-Casper styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
-
-```bash
-$ yarn install
-$ yarn dev
+```html
+<script>
+    document.onkeyup = function(e) {
+        if (e.altKey && e.which == 78) {
+            localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark');
+            localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark');
+        }
+    };
+</script>
 ```
 
-Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
-
-The `zip` Gulp task packages the theme files into `dist/<theme-name>.zip`, which you can then upload to your site.
-
-```bash
-$ yarn zip
-```
-
-# PostCSS Features Used
-
-- Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
-- Variables - Simple pure CSS variables
-- [Color Function](https://github.com/postcss/postcss-color-function)
-
-
-# SVG Icons
-
-Casper uses inline SVG icons, included via Handlebars partials. You can find all icons inside `/partials/icons`. To use an icon just include the name of the relevant file, eg. To include the SVG icon in `/partials/icons/rss.hbs` - use `{{> "icons/rss"}}`.
-
-You can add your own SVG icons in the same manner.
+The default shortcut key combination is set to `ALT + N` and you can set your preferred key by replacing `78` in above code.
+* To get the prefered key code: https://keycode.info/
 
 
 # Copyright & License

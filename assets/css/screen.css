@@ -23,6 +23,7 @@ production stylesheet in assets/built/screen.css
 9.  Error Template
 10. Subscribe Overlay
 11. Site Footer
+12. Dark Mode
 
 */
 
@@ -2277,4 +2278,122 @@ Usage (In Ghost editor):
     .site-footer-nav a:first-child {
         margin-left: 0;
     }
+}
+
+
+/* 12. Dark Mode
+/* ---------------------------------------------------------- */
+
+body.dark{
+    color:var(--darkFontColor);
+    background:var(--darkBackgroundDark);
+}
+body.dark.post-template .site-main,
+body.dark.page-template .site-main,
+body.dark .post-full-content {
+    background:var(--darkBackgroundDark);
+}
+body.dark .post-card {
+    background: var(--darkBackgroundLight) center center;
+}
+body.dark .post-card-content-link {
+    color: var(--darkFontColor);
+}
+body.dark .static-avatar {
+    border: var(--darkLight) 2px solid;
+}
+body.dark .post-card h2 {
+    color: var(--darkLight);
+}
+body.dark .post-full-meta-date {
+    color: var(--darkLight);
+}
+body.dark a {
+    color: color(var(--darkLight) l(-5%));
+}
+body.dark .post-full-title {
+    color: color(var(--darkLight) l(-5%));
+}
+body.dark .post-full-content strong,
+body.dark .post-full-content em {
+    color: color(var(--darkFontColorLight) l(-5%));
+}
+body.dark .post-full-content a:hover {
+    color: var(--darkFontColorLight);
+}
+body.dark .post-full-content h1,
+body.dark .post-full-content h2,
+body.dark .post-full-content h3,
+body.dark .post-full-content h4,
+body.dark .post-full-content h5,
+body.dark .post-full-content h6 {
+    color: color(var(--darkFontColorLight) l(-5%));
+}
+body.dark .subscribe-form {
+    border: color(var(--darkBackground) l(+2%)) 1px solid;
+    background: color(var(--darkBackground) l(+4%));
+}
+body.dark .subscribe-form-title {
+    color: var(--darkFontColorLight);
+}
+body.dark .subscribe-email {
+    border: none;
+    background: var(--darkBackgroundLighter);
+}
+body.dark .subscribe-form p {
+    color: var(--darkFontColor);
+}
+body.dark .subscribe-form button {
+    color: var(--darkFontColorLight);
+    background: linear-gradient(
+    color(var(--darkBackgroundLighter) whiteness(+7%)),
+    color(var(--darkBackgroundLighter) lightness(-7%) saturation(-10%)) 60%,
+    color(var(--darkBackgroundLighter) lightness(-7%) saturation(-10%)) 90%,
+    color(var(--darkBackgroundLighter) lightness(-4%) saturation(-10%))
+    );
+}
+body.dark .floating-header {
+    border-bottom: rgba(0,0,0,0.06) 1px solid;
+    background: rgba(0,0,0,0.95);
+}
+body.dark .floating-header-title {
+    color: var(--darkFontColor);
+}
+body.dark .floating-header-share-label {
+    color: rgba(255,255,255,0.7);
+}
+
+body.dark .floating-header-share-label svg {
+    stroke: rgba(255,255,255,0.7);
+}
+body.dark .floating-header-share svg {
+    fill: var(--darkFontColorLight);
+}
+body.dark .floating-header-share-tw {
+    background: var(--darkBackgroundLighter);
+}
+
+body.dark .floating-header-share-fb {
+    background: var(--darkBackgroundLight);
+}
+body.dark .progress {
+    color: var(--darkFontColorLight);
+}
+body.dark .read-next-card:before {
+    background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.7) 100%);
+}
+body.dark .read-next-card {
+    box-shadow: rgba(0,0,0,0.06) 8px 14px 38px, rgba(0, 0, 0, 0.03) 1px 3px 8px;
+}
+body.dark .post-card-tags {
+    color: var(--darkFontColor);
+}
+body.dark .reading-time {
+    color: var(--darkFontColor);
+}
+body.dark .post-full-content code {
+    background: var(--darkBackgroundLight);
+}
+hr {
+    border-top: 1px solid color(var(--darkBackground) l(+10%));
 }

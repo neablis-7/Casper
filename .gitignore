@@ -22,12 +22,8 @@ projectFilesBackup
 .DS_Store
 
 dist/
+assets/built/
 
 config.json
 changelog.md
 changelog.md.bk
-assets/built/global.css.map
-assets/built/infinitescroll.js.map
-assets/built/jquery.fitvids.js.map
-assets/built/screen.css
-assets/built/screen.css.map

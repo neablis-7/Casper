@@ -24,6 +24,7 @@ To enable the dark mode on your Ghost site, download the latest release of this 
 The default shortcut key combination is set to `ALT + N` and you can set your preferred key by replacing `78` in above code.
 (Note that only left Alt key is working with the provided code)
 * To get the prefered key code: https://keycode.info/
+
 &nbsp;
 ![Home](https://user-images.githubusercontent.com/278469/55558098-f697a900-5708-11e9-8e80-2abcc9da2977.jpg)
 ![Author](https://user-images.githubusercontent.com/278469/55558126-057e5b80-5709-11e9-840c-4ccb8fdcd5d0.jpg)

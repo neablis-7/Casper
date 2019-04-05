@@ -3,12 +3,7 @@
 The  dark mode enabled version of default theme for [Ghost](http://github.com/tryghost/ghost/). If you're just looking to download the original version, head over to the [releases](https://github.com/TryGhost/Casper/releases) page.
 
 &nbsp;
-
-![Home](https://user-images.githubusercontent.com/278469/55558098-f697a900-5708-11e9-8e80-2abcc9da2977.jpg)
-![Author](https://user-images.githubusercontent.com/278469/55558126-057e5b80-5709-11e9-840c-4ccb8fdcd5d0.jpg)
-![Page](https://user-images.githubusercontent.com/278469/55558127-0616f200-5709-11e9-89aa-ad9cd3b7fdb2.jpg)
-![Post](https://user-images.githubusercontent.com/278469/55558128-0616f200-5709-11e9-9db6-9930228854d0.jpg)
-![Tag](https://user-images.githubusercontent.com/278469/55558130-0616f200-5709-11e9-9c38-78a72995401c.jpg)
+![Casper-Dark](https://user-images.githubusercontent.com/278469/55605829-e5e04500-5793-11e9-89e3-16b3f09336f5.gif)
 
 &nbsp;
 
@@ -26,10 +21,15 @@ To enable the dark mode on your Ghost site, download the latest release of this 
     };
 </script>
 ```
-
 The default shortcut key combination is set to `ALT + N` and you can set your preferred key by replacing `78` in above code.
+(Note that only left Alt key is working with the provided code)
 * To get the prefered key code: https://keycode.info/
-
+&nbsp;
+![Home](https://user-images.githubusercontent.com/278469/55558098-f697a900-5708-11e9-8e80-2abcc9da2977.jpg)
+![Author](https://user-images.githubusercontent.com/278469/55558126-057e5b80-5709-11e9-840c-4ccb8fdcd5d0.jpg)
+![Page](https://user-images.githubusercontent.com/278469/55558127-0616f200-5709-11e9-89aa-ad9cd3b7fdb2.jpg)
+![Post](https://user-images.githubusercontent.com/278469/55558128-0616f200-5709-11e9-9db6-9930228854d0.jpg)
+![Tag](https://user-images.githubusercontent.com/278469/55558130-0616f200-5709-11e9-9c38-78a72995401c.jpg)
 
 # Copyright & License
 

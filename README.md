@@ -9,18 +9,6 @@ The  dark mode enabled version of default theme for [Ghost](http://github.com/tr
 
 # What do you have to do?
 
-To enable the dark mode on your Ghost site, download the latest release of this theme and copy and paste the following code into `Code injection -> Site Footer` in Ghost Admin panel.
-
-```html
-<script>
-    document.onkeyup = function(e) {
-        if (e.altKey && e.which == 78) {
-            localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark');
-            localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark');
-        }
-    };
-</script>
-```
 The default shortcut key combination is set to `ALT + N` and you can set your preferred key by replacing `78` in above code.
 (Note that only left Alt key is working with the provided code)
 * To get the prefered key code: https://keycode.info/

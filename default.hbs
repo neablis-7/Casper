@@ -22,6 +22,12 @@
     <script data-cfasync="false" type="text/javascript">
         {{!-- This script executes immediately after the body tag is available. We read the previously saved mode from local storage and set it immediately without waiting for document.ready  --}}
         ("dark"===localStorage.getItem("mode")?document.querySelector("body").classList.add("dark"):document.querySelector("body").classList.remove("dark"));
+        document.onkeyup = function(e) {
+            if (e.altKey && e.which == 78) {
+                localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark');
+                localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark');
+            }
+        };
     </script>
     <div class="site-wrapper">
 
